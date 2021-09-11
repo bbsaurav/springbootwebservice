@@ -87,7 +87,7 @@
   </wsdl:binding>
   <wsdl:service name="StockQuoteService">
     <wsdl:port name="StockQuoteServiceSOAP11port" binding="tns:StockQuoteServiceSOAP11Binding">
-      <soap:address location="http://localhost:8080/services/StockQuoteService/" />
+      <soap:address location="http://localhost:8080/stockquoteservice/services/StockQuoteService" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
