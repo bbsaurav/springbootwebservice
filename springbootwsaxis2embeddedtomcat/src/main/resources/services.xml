@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- This file was auto-generated from WSDL --><!-- by the Apache Axis2 version: 1.8.0  Built on : Aug 01, 2021 (07:27:19 HST) --><serviceGroup>
+    <service name="StockQuoteService">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-only" class="com.springbootwebservice.StockQuoteServiceMessageReceiverInOnly"/>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="com.springbootwebservice.StockQuoteServiceMessageReceiverInOut"/>
+        </messageReceivers>
+        <!-- https://axis.apache.org/axis2/java/core/docs/spring.html#a23 -->
+        <!--
+          Service is running in Servlet Container so supplying SpringBeanName to use the bean object
+          instead of always creating a new instance of service class StockQouteServiceEndpoint
+         -->
+        <parameter name="ServiceObjectSupplier">org.apache.axis2.extensions.spring.receivers.SpringServletContextObjectSupplier</parameter>
+        <parameter name="SpringBeanName">stockQouteServiceEndpoint</parameter>
+        <!-- Update ServiceClass to use the implemented Springboot service StockQouteServiceEndpoint instead of default generated StockQuoteServiceSkeleton class -->
+        <parameter name="ServiceClass">com.springbootwsaxis2embeddedtomcat.stockquoteservice.endpoints.StockQouteServiceEndpoint</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="update" mep="http://www.w3.org/ns/wsdl/in-only" namespace="http://springbootwebservice.com">
+            <actionMapping>urn:update</actionMapping>
+        </operation>
+        <operation name="getPrice" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://springbootwebservice.com">
+            <actionMapping>urn:getPrice</actionMapping>
+            <outputActionMapping>http://springbootwebservice.com/StockQuoteServicePortType/getPriceResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>
