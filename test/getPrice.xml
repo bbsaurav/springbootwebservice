@@ -1,0 +1,7 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:q0="http://springbootwebservice.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soapenv:Body>
+    <q0:getPrice>
+      <q0:symbol>MSFT</q0:symbol>
+    </q0:getPrice>
+  </soapenv:Body>
+</soapenv:Envelope>
